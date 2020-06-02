@@ -1,0 +1,229 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		
+		<meta charset="utf-8">
+		<title>CS290 Project - Grigori Barbachov</title>
+	    <link rel="stylesheet" href="style.css">
+	    <link rel="stylesheet" href="homepage.css">
+
+		<script src="script.js"></script>
+
+	</head>
+	<body>
+
+		<!-- MISC PAGE ELEMENTS -->
+
+		<div class="grid" id="grid">
+			<div id='header' class='header'>
+				<h2 id='page_title'>HOME PAGE</h2>
+				<button id='btn_home'>Home</button>
+				<button id='btn_dynarr'>Dynamic Array</button>
+				<button id='btn_dll'>Doubly Linked List</button>
+				<button id='btn_bst'>Binary Search Tree</button>
+			</div>
+
+			<div id="log" class='log'>
+				<pre> MOST RECENT COMMANDS:</pre>
+				<div><pre id='log_content'></pre></div>
+				<button onClick='clearLog()'>CLEAR LOG</button>
+			</div>
+			
+			<div id='output' class='output'></div>
+
+
+			<div id='footer' class="footer">
+				<form method="get" action = "http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php">
+					<label for="email">Enter your e-mail to subscribe to our newsletter: </label>
+					<input type="text" id="email" name="email">
+					<input type="submit" value="Subscribe">
+				</form>
+				<p>Created by Grigori Barbacv</p>
+			</div>
+
+		<!-- HOME PAGE -->
+
+		<div id='home_page' class="home_page">
+
+			<div class="slideshow-container">
+				<img id='img1' src="images/ds1.png">
+				<img id='img2' src="images/ds2.png">
+				<img id='img3' src="images/ds3.png">
+
+				<!-- Next and previous buttons -->
+				<a id='prev' class="prev" onclick="changeImage(-1)">&#10094;</a>
+				<a id='next' class="next" onclick="changeImage(1)">&#10095;</a>
+			</div>
+		</div>
+
+		<!-- DYNAMIC ARRAY PAGE -->
+
+			<div id='methods_dynamic_array' class="methods">
+
+				<p>
+				Per Wikipedia:
+				<p class='citation'>
+In computer science, a dynamic array, growable array, resizable array, dynamic table, mutable array, or array list is a random access, variable-size list data structure that allows elements to be added or removed. It is supplied with standard libraries in many modern mainstream programming languages. Dynamic arrays overcome a limit of static arrays, which have a fixed capacity that needs to be specified at allocation.
+				</p>
+				You can read more
+				<a href="https://en.wikipedia.org/wiki/Dynamic_array"
+					target="_blank">here on Wikipedia</a>.
+				</p>
+				<p>You can download homework PDF by clicking here:
+				<a href="assets/guide5.pdf" target="_blank" download>
+					<button>DOWNLOAD</button>
+				</a></p>
+				<hr>
+
+				<ul>
+					<li>add_front
+						( <input type="number" min="-999" max="999" id='da11'> )
+						<img src='images/enter.jpeg' onClick="dynArr(1)">
+					</li>
+
+					<li>add_back
+						( <input type="number" min="-999" max="999" id='da21'> )
+						<img src='images/enter.jpeg' onClick='dynArr(2)'>
+					</li>
+				
+					<li>insert_at_index
+						( <input type="number" min="-999" max="999" id='da31'> ,
+						<input type="number" min="-999" max="999" id='da32'> )
+						<img src='images/enter.jpeg' onClick='dynArr(3)'>
+					</li>
+
+					<li>get_front ( )
+						<img src='images/enter.jpeg' onClick='dynArr(4)'>
+					</li>
+
+					<li>get_back ( )
+						<img src='images/enter.jpeg' onClick='dynArr(5)'>
+					</li>
+
+					<li>get_at_index
+						( <input type="number" min="-999" max="999" id='da61'> )
+						<img src='images/enter.jpeg' onClick='dynArr(6)'>
+					</li>
+
+					<li>remove_value
+						( <input type="number" min="-999" max="999" id='da71'> )
+						<img src='images/enter.jpeg' onClick='dynArr(7)'>
+					</li>
+
+				</ul>
+			</div>
+
+		<!-- DOUBLY LINKED LIST PAGE -->
+
+			<div id='methods_doubly_linked_list' class="methods">
+
+				<p>
+				Per Wikipedia:
+				<p class='citation'>
+In computer science, a doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each node contains three fields: two link fields (references to the previous and to the next node in the sequence of nodes) and one data field. The beginning and ending nodes' previous and next links, respectively, point to some kind of terminator, typically a sentinel node or null, to facilitate traversal of the list.
+				</p>
+				You can read more
+				<a href="https://en.wikipedia.org/wiki/Doubly_linked_list"
+					target="_blank">here on Wikipedia</a>.
+				</p>
+				<p>You can download homework PDF by clicking here:
+				<a href="assets/guide3.pdf" target="_blank" download>
+					<button>DOWNLOAD</button>
+				</a></p>
+				<hr>
+
+				<ul>
+					<li>add_front
+						( <input type="number" min="-999" max="999" id='dll11'> )
+						<img src='images/enter.jpeg' onClick="dll(1)">
+					</li>
+
+					<li>add_back
+						( <input type="number" min="-999" max="999" id='dll21'> )
+						<img src='images/enter.jpeg' onClick="dll(2)">
+					</li>
+				
+					<li>insert_at_index
+						( <input type="number" min="-999" max="999" id='dll31'> ,
+						<input type="number" min="-999" max="999" id='dll32'> )
+						<img src='images/enter.jpeg' onClick="dll(3)">
+					</li>
+
+					<li>get_front ( )
+						<img src='images/enter.jpeg' onClick="dll(4)">
+					</li>
+
+					<li>get_back ( )
+						<img src='images/enter.jpeg' onClick="dll(5)">
+					</li>
+
+					<li>get_at_index
+						( <input type="number" min="-999" max="999" id='dll61'> )
+						<img src='images/enter.jpeg' onClick="dll(6)">
+					</li>
+
+					<li>remove_value
+						( <input type="number" min="-999" max="999" id='dll71'> )
+						<img src='images/enter.jpeg' onClick="dll(7)">
+					</li>
+
+				</ul>
+			</div>
+
+		<!-- BINARY TREE PAGE -->
+
+			<div id='methods_binary_search_tree' class="methods">
+
+				<p>
+				Per Wikipedia:
+				<p class='citation'>
+In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of container: a data structure that stores "items" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone number of a person by name).
+				</p>
+				You can read more
+				<a href="https://en.wikipedia.org/wiki/Binary_search_tree"
+					target="_blank">here on Wikipedia</a>.
+				</p>
+				<p>You can download homework PDF by clicking here:
+				<a href="assets/guide4.pdf" target="_blank" download>
+					<button>DOWNLOAD</button>
+				</a></p>
+				<hr>
+
+				<ul>
+					<li>add
+						( <input type="number" min="-999" max="999" id='bst11'> )
+						<img src='images/enter.jpeg' onClick="bst(1)">
+					</li>
+
+					<li>contains
+						( <input type="number" min="-999" max="999" id='bst21'> )
+						<img src='images/enter.jpeg' onClick="bst(2)">
+					</li>
+				
+					<li>remove
+						( <input type="number" min="-999" max="999" id='bst31'> )
+						<img src='images/enter.jpeg' onClick="bst(3)">
+					</li>
+
+					<li>height ( )
+						<img src='images/enter.jpeg' onClick="bst(4)">
+					</li>
+
+					<li>pre_order_traversal ( )
+						<img src='images/enter.jpeg' onClick="bst(5)">
+					</li>
+
+					<li>in_order_traversal ( )
+						<img src='images/enter.jpeg' onClick="bst(6)">
+					</li>
+
+					<li>post_order_traversal ( )
+						<img src='images/enter.jpeg' onClick="bst(7)">
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</body>
+</html>

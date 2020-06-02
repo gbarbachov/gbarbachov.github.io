@@ -1,0 +1,34 @@
+// script.js
+
+start()
+createContentHTML()
+createContentCSS()
+addEventListeners()
+
+
+
+
+ 24             <div class="left_menu">
+ 25                 <button>Home</button>
+ 26                 <button>Dynamic Array</button>
+ 27                 <button>Singly Linked List</button>
+ 28                 <button>Doubly Linked List</button>
+ 29                 <button>Binary Search Tree</button>
+ 30                 <p>TEST</p>
+ 31             </div>
+
+
+
+ LIST OF USED IDs
+ page_title (H2 in header)
+ log / output / footer / header
+
+home_page
+methods_doubly_linked_list
+methods_dynamic_array
+methods_binary_search_tree
+
+
+ btn_home, btn_bst, btn_dll, btn_dynarr
+
+
